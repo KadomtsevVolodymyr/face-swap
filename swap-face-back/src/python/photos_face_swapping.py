@@ -23,7 +23,7 @@ def swap_face(img1, img2):
 
 
     detector = dlib.get_frontal_face_detector()
-    predictor = dlib.shape_predictor("/Users/volodymyrkadomtsev/Downloads/fazy-main/fazy-back/dist/python/shape_predictor_68_face_landmarks.dat")
+    predictor = dlib.shape_predictor("/Users/volodymyrkadomtsev/Downloads/fazy-main/swap-face-back/dist/python/shape_predictor_68_face_landmarks.dat")
     height, width, channels = img2.shape
     img2_new_face = np.zeros((height, width, channels), np.uint8)
 
@@ -191,6 +191,6 @@ def swap_face(img1, img2):
 
 
 
-imageBuffer1 = "/Users/volodymyrkadomtsev/Downloads/fazy-main/fazy-back/dist/temp/temp_image1.png"
-imageBuffer2 = "/Users/volodymyrkadomtsev/Downloads/fazy-main/fazy-back/dist/temp/temp_image2.png"
+imageBuffer1 = "/Users/volodymyrkadomtsev/Downloads/fazy-main/swap-face-back/dist/temp/temp_image1.png"
+imageBuffer2 = "/Users/volodymyrkadomtsev/Downloads/fazy-main/swap-face-back/dist/temp/temp_image2.png"
 output_file_path = swap_face(imageBuffer1, imageBuffer2)
